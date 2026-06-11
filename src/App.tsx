@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
 import { Home, About, Projects } from './components/Pages'
+import Footer from './components/Footer/Footer'
 
 
 
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+      <Footer />
     </div>
   )
 }
