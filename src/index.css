@@ -10,7 +10,7 @@
 
 .Container{
   width: 100vw;
-  min-height: 100vh;
+  min-height: 100%;
   background: #ffffff;
   transition: 0.5s;
 }
