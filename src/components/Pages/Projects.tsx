@@ -1,6 +1,6 @@
 import '../ProjectBoxes/ProjectBoxes.css';
 import { ProjectBox } from '../ProjectBoxes/ProjectBoxes';
-import { projects } from '../ProjectBoxes/ProjectBoxesData';
+import { miniProjects, projects } from '../ProjectBoxes/ProjectBoxesData';
 
 export const Projects = () => {
   return (
@@ -9,6 +9,12 @@ export const Projects = () => {
       <div className="grid-container">
         {projects.map((project) => (
           <ProjectBox key={project.id} project={project} />
+        ))}
+      </div>
+      <h1>Mini-Projects | Code Concept Challenges</h1>
+      <div className="grid-container">
+        {miniProjects.map((miniproject) => (
+          <ProjectBox key={miniproject.id} project={miniproject} />
         ))}
       </div>
     </>

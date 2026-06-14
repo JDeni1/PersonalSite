@@ -1,6 +1,7 @@
 h1 {
   color: coral;
   text-align: center;
+  padding: 40px 0;
 }
 
 /* LIGHT THEME */
@@ -42,7 +43,7 @@ h1 {
   column-gap: 1.5rem;
   width: 90%;
   margin: 0 auto;
-  padding-top: 70px; /* offset for sticky navbar */
+  padding-top: 70px; 
 
   .grid-item {
     margin: 0 1.5rem 1.5rem 0;
@@ -57,7 +58,7 @@ h1 {
     break-inside: avoid;
 
     &:hover {
-      border-color: rgb(80, 173, 255);
+      border-color: #50adff;
     }
 
     p {
