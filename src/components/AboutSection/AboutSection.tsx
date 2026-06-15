@@ -1,8 +1,14 @@
 import React from 'react'
+import { Intro } from '../Intro/Intro'
+import { AboutIntroData } from '../Intro/IntroData'
 
 const AboutSection = () => {
   return (
-    <div>AboutSection</div>
+    <>      <div className = "WelcomeIntro">
+            {AboutIntroData.map((intro) => ( 
+              <Intro key={intro.id} intro={intro} />
+            ))}
+          </div></>
   )
 }
 

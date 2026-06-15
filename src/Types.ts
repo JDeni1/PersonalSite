@@ -1,3 +1,4 @@
+
 export interface Project {
   id: string;
   title: string;
@@ -17,4 +18,11 @@ export interface ContactInfo {
   href: string;
   external: boolean;
   icon: SocialIconName;
+}
+
+export interface Intro {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
 }

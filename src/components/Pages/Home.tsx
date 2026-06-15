@@ -1,18 +1,31 @@
-import React from 'react'
 import { contactInfo } from '../Contacts/ContactData';
 import { Contact } from '../Contacts/Contacts';
+import { HomeIntroData } from '../Intro/IntroData';
+import { Intro } from '../Intro/Intro';
+import AboutSection from '../AboutSection/AboutSection';
+
 
 export const Home = () => {
   return (
     <>
-      <div>Home</div>
-
-      <div className="contacts-section">
-        <div className="contacts-grid">
-          {contactInfo.map((contact) => (
-            <Contact key={contact.id} contact={contact} />
+     <div id="home">
+        <div className = "WelcomeIntro">
+          {HomeIntroData.map((intro) => ( 
+            <Intro key={intro.id} intro={intro} />
           ))}
         </div>
+
+        <div className="contacts-section">
+          <div className="contacts-grid">
+            {contactInfo.map((contact) => (
+              <Contact key={contact.id} contact={contact} />
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div id="about" className="aboutSection">
+        <AboutSection />
       </div>
     </>
   )

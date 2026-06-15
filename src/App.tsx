@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import { Route, Routes } from 'react-router-dom'
-import { Home, About, Projects } from './components/Pages'
 import Footer from './components/Footer/Footer'
+import { Home, Projects } from './components/Pages'
 
 export default function App() {
   const currentTheme = localStorage.getItem('theme') as 'light' | 'dark' | null
@@ -17,7 +17,7 @@ export default function App() {
       <Navbar theme={theme} setTheme={setTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        {/* <Route path="/about" element={<About />} /> */}
         <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />

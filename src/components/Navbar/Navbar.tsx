@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Navbar.css'
 import logo_light from '../../assets/logo-black.png'
 import logo_dark from '../../assets/logo-white.png'
 import toggle_light from '../../assets/night.png'
 import toggle_dark from '../../assets/day.png'
-import { NavLink, useLocation } from 'react-router-dom'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 type NavbarProps = {
@@ -13,16 +13,73 @@ type NavbarProps = {
 }
 
 const tabs = [
-    { label: 'Home', path: '/' },
-    { label: 'About', path: '/about' },
+    { label: 'Home', path: '/', sectionId: 'home' },
+    { label: 'About', path: '/', sectionId: 'about' },
     { label: 'Projects', path: '/projects' },
 ]
 
 const Navbar = ({ theme, setTheme }: NavbarProps) => {
     const location = useLocation()
+    const navigate = useNavigate()
+    const [activeSection, setActiveSection] = useState('home')
 
     const toggleTheme = () => {
         setTheme(theme === 'light' ? 'dark' : 'light')
+    }
+
+    const scrollToSection = (sectionId: string) => {
+        const el = document.getElementById(sectionId)
+        el?.scrollIntoView({ behavior: 'smooth' })
+    }
+
+    const handleClick = (
+        e: React.MouseEvent,
+        tab: typeof tabs[number]
+    ) => {
+        if (!tab.sectionId) return // Projects: normal routing
+
+        e.preventDefault()
+        setActiveSection(tab.sectionId)
+
+        if (location.pathname !== '/') {
+            navigate('/')
+            setTimeout(() => scrollToSection(tab.sectionId!), 100)
+        } else {
+            scrollToSection(tab.sectionId)
+        }
+    }
+
+    // Watch which section is currently visible while on "/"
+    useEffect(() => {
+        if (location.pathname !== '/') return
+
+        const homeEl = document.getElementById('home')
+        const aboutEl = document.getElementById('about')
+        if (!homeEl || !aboutEl) return
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id)
+                    }
+                })
+            },
+            { threshold: 0.5 } // section counts as "active" once 50% visible
+        )
+
+        observer.observe(homeEl)
+        observer.observe(aboutEl)
+
+        return () => observer.disconnect()
+    }, [location.pathname])
+
+    const getIsActive = (tab: typeof tabs[number]) => {
+        if (tab.path === '/projects') {
+            return location.pathname === '/projects'
+        }
+        if (location.pathname !== '/') return false
+        return activeSection === tab.sectionId
     }
 
     return (
@@ -32,14 +89,15 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
                 alt="logo"
                 className="logo"
             />
-
             <ul className="nav-links">
                 {tabs.map((tab) => {
-                    const isActive = location.pathname === tab.path
+                    const isActive = getIsActive(tab)
+
                     return (
-                        <li key={tab.path} className="nav-item">
+                        <li key={tab.label} className="nav-item">
                             <NavLink
                                 to={tab.path}
+                                onClick={(e) => handleClick(e, tab)}
                                 className={`nav-link ${isActive ? 'active' : ''}`}
                             >
                                 {isActive && (
@@ -59,7 +117,6 @@ const Navbar = ({ theme, setTheme }: NavbarProps) => {
                     )
                 })}
             </ul>
-
             <motion.img
                 onClick={toggleTheme}
                 src={theme === 'light' ? toggle_light : toggle_dark}
