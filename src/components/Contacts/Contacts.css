@@ -1,0 +1,113 @@
+/* Outer frame */
+.contacts-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border: 1px solid rgb(229, 231, 235);
+  border-radius: 0.75rem;
+}
+
+.dark .contacts-section {
+  border-color: rgb(55, 65, 81);
+}
+
+/* Grid of cards */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Individual card */
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(229, 231, 235);
+  text-decoration: none;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .contact-card {
+  border-color: rgb(55, 65, 81);
+}
+
+.contact-card:hover {
+  transform: translateY(-2px) scale(1.01);
+  border-color: rgb(209, 213, 219);
+}
+
+.dark .contact-card:hover {
+  border-color: rgb(75, 85, 99);
+}
+
+.contact-card:active {
+  transform: scale(0.99);
+}
+
+/* ===== Icon ===== */
+.contact-icon {
+  flex-shrink: 0;
+  display: flex;
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: rgb(75, 85, 99);
+  transition: color 0.2s ease-in-out;
+}
+
+.dark .contact-icon svg {
+  color: rgb(156, 163, 175);
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.contact-card:hover .contact-icon svg {
+  color: rgb(17, 24, 39);
+}
+
+.dark .contact-card:hover .contact-icon svg {
+  color: rgb(255, 255, 255);
+}
+
+/* Text */
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1 1 0%;
+}
+
+.contact-label {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(17, 24, 39);
+}
+
+.dark .contact-label {
+  color: rgb(255, 255, 255);
+}
+
+.contact-value {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgb(107, 114, 128);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dark .contact-value {
+  color: rgb(156, 163, 175);
+}
