@@ -2,7 +2,7 @@ import { contactInfo } from '../Contacts/ContactData';
 import { Contact } from '../Contacts/Contacts';
 import { HomeIntroData } from '../Intro/IntroData';
 import { Intro } from '../Intro/Intro';
-import AboutSection from '../AboutSection/AboutSection';
+import AboutSection from './AboutSection';
 
 
 export const Home = () => {

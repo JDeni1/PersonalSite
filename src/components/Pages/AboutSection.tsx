@@ -4,11 +4,13 @@ import { AboutIntroData } from '../Intro/IntroData'
 
 const AboutSection = () => {
   return (
-    <>      <div className = "WelcomeIntro">
-            {AboutIntroData.map((intro) => ( 
-              <Intro key={intro.id} intro={intro} />
-            ))}
-          </div></>
+    <>      
+      <div className = "WelcomeIntro">
+        {AboutIntroData.map((intro) => ( 
+          <Intro key={intro.id} intro={intro} />
+       ))}
+     </div>
+    </>
   )
 }
 
