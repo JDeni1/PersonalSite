@@ -1,0 +1,123 @@
+.hobbiesGallery-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+
+.hobbiesGallery-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.hobbiesGallery-subheading {
+  color: #888;
+  margin: 0 0 1.5rem;
+}
+
+.hobbiesGallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.hobbiesGallery-thumb {
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 1 / 1;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.hobbiesGallery-thumb:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.hobbiesGallery-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hobbiesGallery-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.hobbiesGallery-modal {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 420px;
+  max-width: 90vw;
+  position: relative;
+}
+
+.hobbiesGallery-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+
+.hobbiesGallery-modal-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+}
+
+.hobbiesGallery-modal-info {
+  padding: 1rem 1.25rem 1.25rem;
+}
+
+.hobbiesGallery-modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.hobbiesGallery-modal-desc {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.hobbiesGallery-modal-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.dark .hobbiesGallery-modal {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark .hobbiesGallery-modal-desc {
+  color: #aaa;
+}
+
+.dark .hobbiesGallery-close {
+  background: #333;
+  color: white;
+}

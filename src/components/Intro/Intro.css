@@ -20,18 +20,29 @@
 }
 
 .IntroDescription {
-  margin: 0.5rem 0 0 0;
+  margin: 0.5 rem 0 0 0;
 }
 
 .IntroImage {
   flex-shrink: 0;
 }
 
-.IntroImage .IntroImg {
+.dark .IntroImage .IntroImg {
   display: inline-block;
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  border: solid 2px #ffffff;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.light .IntroImage .IntroImg {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 2px #050505;
   object-fit: cover;
   object-position: center center;
 }

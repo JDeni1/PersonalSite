@@ -26,3 +26,25 @@ export interface Intro {
   description: string;
   image: string;
 }
+
+export interface HobbiesGalleryItem {
+  id: string
+  image: string
+  title: string
+  description: string
+  date: string
+}
+
+export interface TimelineItem {
+  id: string
+  text: string
+  date: string
+  category: {
+    tag: string
+    color: string
+  }
+  link?: {
+    url: string
+    text: string
+  }
+}
