@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import './HobbiesGallery.css'
 import type { HobbiesGalleryItem } from '../../Types'
 import { hobbiesGalleryItems } from './HobbiesGalleryData'

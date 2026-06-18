@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Intro as IntroType } from '../../Types';
 import './Intro.css';
 

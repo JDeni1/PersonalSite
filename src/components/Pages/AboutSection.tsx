@@ -1,4 +1,3 @@
-import React from 'react'
 import { Intro } from '../Intro/Intro'
 import { AboutIntroData } from '../Intro/IntroData'
 import HobbiesGallery from '../HobbiesGallery/HobbiesGallery'

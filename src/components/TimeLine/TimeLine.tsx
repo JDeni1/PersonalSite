@@ -1,4 +1,3 @@
-import React from 'react'
 import './TimeLine.css'
 import type { TimelineItem } from '../../Types'
 import { timelineData } from './TimeLineData'
