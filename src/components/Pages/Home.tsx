@@ -3,7 +3,7 @@ import { Contact } from '../Contacts/Contacts';
 import { HomeIntroData } from '../Intro/IntroData';
 import { Intro } from '../Intro/Intro';
 import AboutSection from './AboutSection';
-
+import TimeLine from '../TimeLine/TimeLine';
 
 export const Home = () => {
   return (
@@ -23,6 +23,8 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+     <TimeLine />
 
       <div id="about" className="aboutSection">
         <AboutSection />

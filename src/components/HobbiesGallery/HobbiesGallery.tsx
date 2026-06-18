@@ -8,8 +8,8 @@ const HobbiesGallery = () => {
 
   return (
     <section className="hobbiesGallery-section">
-      <h2 className="hobbiesGallery-heading">Off the screen</h2>
-      <p className="hobbiesGallery-subheading">A few glimpses from life beyond the keyboard.</p>
+      {/* <h2 className="hobbiesGallery-heading">Off the screen</h2>
+      <p className="hobbiesGallery-subheading">A few glimpses from life beyond the keyboard.</p> */}
 
       <div className="hobbiesGallery-grid">
         {hobbiesGalleryItems.map((item) => (

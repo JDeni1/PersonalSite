@@ -11,7 +11,7 @@ const AboutSection = () => {
           <Intro key={intro.id} intro={intro} />
        ))}
      </div>
-     
+
      <HobbiesGallery />
     </>
   )

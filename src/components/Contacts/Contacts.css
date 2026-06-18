@@ -111,3 +111,22 @@
 .dark .contact-value {
   color: rgb(156, 163, 175);
 }
+
+@media (max-width: 600px) {
+  .contacts-section {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .contacts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card {
+    padding: 0.65rem 0.875rem;
+  }
+
+  .contact-value {
+    font-size: 0.7rem;
+  }
+}
