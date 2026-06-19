@@ -1,22 +1,24 @@
 import type { Project } from "../../Types";
+import NibbleWise from '../../assets/NibbleWise.jpg'
 
 export const projects: Project[] = [
   {
     id: '1',
     title: 'NibbleWise',
-    description: 'A meal-planning app that generates recipes from what\'s in your fridge.',
-    image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?ixli...',
-    githubUrl: 'https://github.com/yourusername/nibblewise',
-    techStack: ['TypeScript', 'React', 'Node.js'],
+    description: 'A kahoot-style quiz game focuing on educating students about edible plants native to Vancouver. Utlized ',
+    image: NibbleWise,
+    video: 'https://youtu.be/xuxqXuT15vU',
+    githubUrl: 'httpss://github.com/annie-ayzf/2800-202610-BBY09',
+    techStack: ['EJS', 'CSS', 'JavaScript' , 'Node.js', 'MongoDB'],
   },
   {
     id: '2',
     title: 'CrowdControl',
-    description: 'Real-time crowd density dashboard using websocket feeds.',
+    description: 'A web application designed to locate crowded areas through a live social feed.',
     image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixli...',
-    video: '/videos/crowdcontrol-demo.mp4',
-    githubUrl: 'https://github.com/yourusername/crowdcontrol',
-    techStack: ['React', 'Express.js', 'AWS'],
+    // video: '/videos/crowdcontrol-demo.mp4',
+    githubUrl: 'https://github.com/JDeni1/1800_202610_BBY09',
+    techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Firebase'],
   },
 ];
 
@@ -42,16 +44,21 @@ export const miniProjects: Project[] = [
 
 // techColors.ts
 export const techColors: Record<string, string> = {
-  TypeScript: '#3178c6',
-  React: '#61dafb',
+  TypeScript: '#21548b',
+  React: '#2aa5c8',
   'Node.js': '#3c873a',
   'Next.js': '#000000',
   'Express.js': '#4a1c1c',
   AWS: '#ff9900',
   CSS: '#264de4',
   HTML: '#e34c26',
-  Tailwind: '#38bdf8',
+  Tailwind: '#38f8a2',
+  Firebase: '#ca4040',
+  EJS: '#dfbb61',
+  JavaScript: '#ffb700',
+  MongoDB: '#40a03b',
+  OpenAIAPI: '#3a1919'
 };
 
 // Fallback color for anything not in the map
-export const defaultPillColor = 'coral';
+export const defaultPilslColor = '#fff';
