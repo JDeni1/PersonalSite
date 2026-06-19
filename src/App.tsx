@@ -4,7 +4,6 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer/Footer'
 import { Home, Projects } from './components/Pages'
 
-
 export default function App() {
   const currentTheme = localStorage.getItem('theme') as 'light' | 'dark' | null
   const [theme, setTheme] = React.useState<'light' | 'dark'>(currentTheme || 'light')

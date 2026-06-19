@@ -39,6 +39,7 @@ export interface TimelineItem {
   id: string
   text: string
   date: string
+  description?: string
   category: {
     tag: string
     color: string

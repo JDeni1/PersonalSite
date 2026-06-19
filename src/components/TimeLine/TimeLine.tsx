@@ -20,6 +20,9 @@ const TimeLineCard = ({ data }: { data: TimelineItem }) => (
       </span>
       <time className="timeline-date">{data.date}</time>
       <p className="timeline-text">{data.text}</p>
+      {data.description && (
+        <p className="timeline-description">{data.description}</p>
+      )}
       {data.link && (
         <a
           href={data.link.url}
