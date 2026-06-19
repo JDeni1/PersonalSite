@@ -31,6 +31,7 @@ export const miniProjects: Project[] = [
     description: 'A memory card game based on pokemon.',
     image: PokemonFlipGame,
     githubUrl: 'https://github.com/yourusername/nibblewise',
+    video: 'https://youtu.be/U5KD78bmJSU',
     techStack: ['TypeScript', 'React', 'Node.js'],
   },
   {
