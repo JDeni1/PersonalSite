@@ -2,12 +2,9 @@
 
 A personal, responsive portfolio website built with React and TypeScript. Features a clean design, dark mode support, and a single-page layout for the Home and About sections.
 
----
-
 ## Live Site
 
 >https://jill-bautista.onrender.com/
----
 
 ## Tech Stack
 
@@ -21,35 +18,31 @@ A personal, responsive portfolio website built with React and TypeScript. Featur
 
 - **Framer Motion** — Animations and page transitions
 
----
-
 ## Features
 
 ### Dark Mode
-Toggle between light and dark themes using the sun/moon button in the navbar. The selected theme is persisted in `localStorage` so it is remembered between visits.
+- Toggle between light and dark themes using the sun/moon button in the navbar. The selected theme is persisted in `localStorage` so it is remembered between visits.
 
 ### Responsive Design
-The layout adapts across desktop, tablet, and mobile screen sizes using CSS media queries and flexible grid/flex layouts.
+- The layout adapts across desktop, tablet, and mobile screen sizes using CSS media queries and flexible grid/flex layouts.
 
 ### Single-Page Home + About
-The Home and About sections live on the same scrollable page. The navbar's "About" link smoothly scrolls to the About section using `IntersectionObserver` to track which section is currently in view and highlight the correct nav item.
+- The Home and About sections live on the same scrollable page. The navbar's "About" link smoothly scrolls to the About section using `IntersectionObserver` to track which section is currently in view and highlight the correct nav item.
 
 ### Projects Page
-A separate `/projects` route showcases software projects, with each project card supports hover animations and optionally plays a preview video.
+- A separate `/projects` route showcases software projects, with each project card supports hover animations and optionally plays a preview video.
 
 ### Timeline
-A vertical timeline on the Home page displaying key milestones. Each entry has a colour-coded tag (work, education, project, etc.) with the dot on the timeline line matching the tag colour.
+- A vertical timeline on the Home page displaying key milestones. Each entry has a colour-coded tag (work, education, project, etc.) with the dot on the timeline line matching the tag colour.
 
 ### Photo Gallery
-A gallery in the About section displays personal photos in a 3-column grid. Clicking a photo opens a modal with the image, a title, description, and date.
+- A gallery in the About section displays personal photos in a 3-column grid. Clicking a photo opens a modal with the image, a title, description, and date.
 
 ### Contact Cards
-Quick-access contact cards (Email, LinkedIn) are displayed on the Home page with hover animations.
+- Quick-access contact cards (Email, LinkedIn) are displayed on the Home page with hover animations.
 
 ### Sticky Navbar
-The navbar sticks to the top of the page on scroll and uses a spring animation (via Framer Motion's `layoutId`) to slide the active indicator between tabs smoothly.
-
----
+- The navbar sticks to the top of the page on scroll and uses a spring animation (via Framer Motion's `layoutId`) to slide the active indicator between tabs smoothly.
 
 ## Project Structure
 
@@ -71,8 +64,6 @@ src/
 ├── main.tsx                 # Entry point
 └── index.css                # Global styles
 ```
-
----
 
 ## Getting Started
 
@@ -111,8 +102,6 @@ Output is written to the `dist/` folder.
 npm run preview
 ```
 
----
-
 ## Deployment
 
 This site is deployed as a **Static Site** on [Render](https://render.com).
@@ -124,8 +113,6 @@ This site is deployed as a **Static Site** on [Render](https://render.com).
 | Rewrite Rule | `/* → /index.html` |
 
 The rewrite rule ensures client-side routes like `/projects` don't 404 on refresh.
-
----
 
 ## Customisation
 
