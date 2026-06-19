@@ -1,5 +1,7 @@
 import type { Project } from "../../Types";
 import NibbleWise from '../../assets/NibbleWise.jpg'
+import CrowdControl from '../../assets/CrowdControl.jpg'
+import PokemonFlipGame from '../../assets/PokemonFlipGame.jpg'
 
 export const projects: Project[] = [
   {
@@ -15,7 +17,7 @@ export const projects: Project[] = [
     id: '2',
     title: 'CrowdControl',
     description: 'A web application designed to locate crowded areas through a live social feed.',
-    image: 'https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?ixli...',
+    image: CrowdControl,
     // video: '/videos/crowdcontrol-demo.mp4',
     githubUrl: 'https://github.com/JDeni1/1800_202610_BBY09',
     techStack: ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'Firebase'],
@@ -25,9 +27,9 @@ export const projects: Project[] = [
 export const miniProjects: Project[] = [
   {
     id: '1',
-    title: 'Test1',
-    description: 'A meal-planning app that generates recipes from what\'s in your fridge.',
-    image: 'https://images.unsplash.com/photo-1544568100-847a948585b9?ixli...',
+    title: ' Pokemon Flip Game',
+    description: 'A memory card game based on pokemon.',
+    image: PokemonFlipGame,
     githubUrl: 'https://github.com/yourusername/nibblewise',
     techStack: ['TypeScript', 'React', 'Node.js'],
   },
@@ -61,4 +63,4 @@ export const techColors: Record<string, string> = {
 };
 
 // Fallback color for anything not in the map
-export const defaultPilslColor = '#fff';
+export const defaultPillColor = '#fff';
