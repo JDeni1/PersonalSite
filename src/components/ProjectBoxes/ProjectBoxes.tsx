@@ -29,12 +29,7 @@ export const ProjectBox = ({ project }: ProjectBoxProps) => {
   };
 
   return (
-    <a
-      href={project.githubUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="grid-item-link"
-    >
+    <div className="grid-item-wrapper">
       <div
         className="grid-item"
         onMouseEnter={handleMouseEnter}
@@ -58,7 +53,44 @@ export const ProjectBox = ({ project }: ProjectBoxProps) => {
             alt={project.title}
           />
         )}
+
         <p>{project.title}</p>
+
+        <div className="grid-item-links">
+          {project.video && (
+            <a
+              href={project.video}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item-btn"
+              onClick={(e) => e.stopPropagation()}
+            >
+              ▶ Video
+            </a>
+          )}
+          {project.projectUrl && (
+            <a
+              href={project.projectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item-btn"
+              onClick={(e) => e.stopPropagation()}
+            >
+              🔗 Project
+            </a>
+          )}
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="grid-item-btn"
+              onClick={(e) => e.stopPropagation()}
+            >
+              GitHub
+            </a>
+          )}
+        </div>
       </div>
 
       {isHovered && (
@@ -80,6 +112,6 @@ export const ProjectBox = ({ project }: ProjectBoxProps) => {
           </div>
         </div>
       )}
-    </a>
+    </div>
   );
 };
